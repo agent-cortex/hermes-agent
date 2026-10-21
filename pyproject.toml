@@ -185,4 +185,6 @@ exclude = ["tinker-atropos"]
 select = [] # disable all lints for now, until we've wrangled typechecks a bit more :3
 
 [tool.uv]
+# discord.py voice still caps PyNaCl below its security fix; its current APIs are retained.
+override-dependencies = ["pynacl>=1.6,<1.7"]
 exclude-newer = "7 days"
